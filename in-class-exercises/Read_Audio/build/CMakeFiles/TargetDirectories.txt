@@ -1,11 +1,5 @@
-/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/Read_Audio/build/CMakeFiles/rebuild_cache.dir
-/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/Read_Audio/build/CMakeFiles/edit_cache.dir
-/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/Read_Audio/build/MUSI6106Exec/CMakeFiles/rebuild_cache.dir
-/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/Read_Audio/build/MUSI6106Exec/CMakeFiles/edit_cache.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/Read_Audio/build/CMakeFiles/ALL_BUILD.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/Read_Audio/build/CMakeFiles/ZERO_CHECK.dir
 /Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/Read_Audio/build/MUSI6106Exec/CMakeFiles/MUSI6106Exec.dir
-/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/Read_Audio/build/AudioFileIO/CMakeFiles/rebuild_cache.dir
-/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/Read_Audio/build/AudioFileIO/CMakeFiles/edit_cache.dir
 /Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/Read_Audio/build/AudioFileIO/CMakeFiles/AudioFileIO.dir
-/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/Read_Audio/build/AudioFileIO/sndlib/CMakeFiles/rebuild_cache.dir
-/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/Read_Audio/build/AudioFileIO/sndlib/CMakeFiles/edit_cache.dir
 /Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/Read_Audio/build/AudioFileIO/sndlib/CMakeFiles/sndlib.dir
