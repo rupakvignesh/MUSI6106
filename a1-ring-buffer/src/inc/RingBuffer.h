@@ -61,6 +61,7 @@ public:
     void setWriteIdx (int iNewWriteIdx)
     {
         m_iWriteIdx = iNewWriteIdx;
+        modWriteReadIdx();
     }
 
     /*! return the current index for reading/get
@@ -78,6 +79,7 @@ public:
     void setReadIdx (int iNewReadIdx)
     {
         m_iReadIdx = iNewReadIdx;
+        modWriteReadIdx();
     }
 
     /*! add a new value of type T to write index and increment write index
@@ -86,6 +88,7 @@ public:
     */
     void putPostInc (T tNewValue)
     {
+        modWriteReadIdx();
         m_ptBuff[m_iWriteIdx++] = tNewValue;
     }
 
@@ -94,6 +97,7 @@ public:
     */
     T getPostInc ()
     {
+        modWriteReadIdx();
         return m_ptBuff[m_iReadIdx++];
     }
 
@@ -101,8 +105,9 @@ public:
     \param iOffset: read at offset from read index
     \return type T the value from the read index
     */
-    T get (int iOffset = 0) const
+    T get (int iOffset = 0) const //Not working with const???
     {
+        modWriteReadIdx();
         return m_ptBuff[m_iReadIdx+iOffset];
     }
     
@@ -140,5 +145,10 @@ private:
         m_iWriteIdx;                //!< current write index
 
     T   *m_ptBuff;                  //!< data buffer
+    void modWriteReadIdx()
+    {
+        m_iWriteIdx = m_iWriteIdx%m_iBuffLength;
+        m_iReadIdx = m_iReadIdx%m_iBuffLength;
+    }
 };
 #endif // __RingBuffer_hdr__
