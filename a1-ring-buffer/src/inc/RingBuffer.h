@@ -35,7 +35,7 @@ public:
     */
     void put(T tNewValue)
     {
-        // to be implemented
+        m_ptBuff[m_iWriteIdx] = tNewValue;
     }
     
     /*! return the value at the current read index
@@ -43,7 +43,7 @@ public:
     */
     T get () const
     {
-        // to be implemented
+        return m_ptBuff[m_iReadIdx];
     }
 
     /*! return the current index for writing/put
@@ -51,7 +51,7 @@ public:
     */
     int getWriteIdx () const
     {
-        // to be implemented
+        return m_iWriteIdx;
     }
 
     /*! move the write index to a new position
@@ -60,7 +60,7 @@ public:
     */
     void setWriteIdx (int iNewWriteIdx)
     {
-        // to be implemented
+        m_iWriteIdx = iNewWriteIdx;
     }
 
     /*! return the current index for reading/get
@@ -68,7 +68,7 @@ public:
     */
     int getReadIdx () const
     {
-        // to be implemented
+        return m_iReadIdx;
     }
 
     /*! move the read index to a new position
@@ -77,7 +77,7 @@ public:
     */
     void setReadIdx (int iNewReadIdx)
     {
-        // to be implemented
+        m_iReadIdx = iNewReadIdx;
     }
 
     /*! add a new value of type T to write index and increment write index
@@ -86,7 +86,7 @@ public:
     */
     void putPostInc (T tNewValue)
     {
-        // to be implemented
+        m_ptBuff[m_iWriteIdx++] = tNewValue;
     }
 
     /*! return the value at the current read index and increment the read pointer
@@ -94,7 +94,7 @@ public:
     */
     T getPostInc ()
     {
-        // to be implemented
+        return m_ptBuff[m_iReadIdx++];
     }
 
     /*! return the value at the index with an arbitrary offset
@@ -103,7 +103,7 @@ public:
     */
     T get (int iOffset = 0) const
     {
-        // to be implemented
+        return m_ptBuff[m_iReadIdx+iOffset];
     }
     
     /*! set buffer content and indices to 0

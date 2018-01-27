@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
     // You don't need to use an audio file this time, though you can try if you want.
     // std::string             sInputFilePath,                 //!< file paths
     //                         sOutputFilePath;
-    // static const int        kBlockSize          = 1024;
+     static const int        kBlockSize          = 1024;
     // float                   **ppfAudioData      = 0;
     // CAudioFileIf            *phAudioFile        = 0;
     // CAudioFileIf::FileSpec_t stFileSpec;
@@ -37,9 +37,12 @@ int main(int argc, char* argv[])
     //////////////////////////////////////////////////////////////////////////////
     // allocate memory
     time                    = clock();
-
+    pCRingBuffer = new CRingBuffer<float> (kBlockSize);
 
     // fill the test signal (e.g., a unit impulse)
+    pfTestSignal = new float [kBlockSize];
+    pfTestSignal[0] = 1;                            // Unit impulse
+    
 
 
     //////////////////////////////////////////////////////////////////////////////
