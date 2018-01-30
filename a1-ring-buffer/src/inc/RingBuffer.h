@@ -86,8 +86,7 @@ public:
     */
     void putPostInc (T tNewValue)
     {
-        idx = mod(m_iWriteIdx++, m_iBuffLength);
-        m_ptBuff[idx] = tNewValue;
+        m_ptBuff[mod(m_iWriteIdx++, m_iBuffLength)] = tNewValue;
     }
 
     /*! return the value at the current read index and increment the read pointer
@@ -95,8 +94,7 @@ public:
     */
     T getPostInc ()
     {
-        idx = mod(m_iReadIdx++, m_iBuffLength);
-        return m_ptBuff[idx];
+        return m_ptBuff[mod(m_iReadIdx++, m_iBuffLength)];
     }
 
     /*! return the value at the index with an arbitrary offset
@@ -105,8 +103,7 @@ public:
     */
     T get (int iOffset = 0) const
     {
-        idx = mod(m_iReadIdx+iOffset, m_iBuffLength);
-        return m_ptBuff[idx];
+        return m_ptBuff[mod(m_iReadIdx+iOffset, m_iBuffLength)];
     }
     
     /*! set buffer content and indices to 0
@@ -140,8 +137,7 @@ private:
 
     int m_iBuffLength,              //!< length of the internal buffer
         m_iReadIdx,                 //!< current read index
-        m_iWriteIdx,                //!< current write index
-        idx;                        //!< idx with mod 
+        m_iWriteIdx;                //!< current write index
 
     T   *m_ptBuff;                  //!< data buffer
     
