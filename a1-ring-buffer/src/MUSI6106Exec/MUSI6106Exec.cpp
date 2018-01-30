@@ -13,6 +13,48 @@ using std::endl;
 // local function declarations
 void    showClInfo ();
 
+void testFillBuffer(CRingBuffer<float> *pCRingBuffer, float* pfTestSignal, int kBlockSize){
+    for(int i=0;i<kBlockSize;i++){
+        pCRingBuffer->putPostInc(pfTestSignal[i]);
+    }
+    int sum = 0;
+    for(int i=0;i<3*kBlockSize;i++){
+        if (pCRingBuffer->getPostInc() == pfTestSignal[i%kBlockSize]) sum += 1;
+    }
+    if(sum==3*kBlockSize){
+        cout<<"Fill buffer test case Passed"<<endl;
+    }
+    else{
+        cout<<"Test case failed"<<endl;
+    }
+}
+
+void testMethods(CRingBuffer<float> *pCRingBuffer, float* pfTestSignal, int kBlockSize){
+    int prod = 1;
+    pCRingBuffer->reset();                                      //w=0, r=0
+    if(pCRingBuffer->getWriteIdx() != 0) prod = 0;              //w=0
+    pCRingBuffer->put(521);
+    if(pCRingBuffer->getReadIdx() != 0) prod =0 ;               //r=0
+    pCRingBuffer->setReadIdx(kBlockSize-1);
+    if(pCRingBuffer->getReadIdx() != kBlockSize-1) prod=0;      //r=kBlockSize-1
+    pCRingBuffer->setReadIdx(pCRingBuffer->getWriteIdx());      //r=0
+    if(pCRingBuffer->get(0) != 521) prod = 0;                           //521
+
+    if(prod==1){
+        cout<<"Test cases for methods passed"<<endl;
+    }
+    else{
+        cout<<"Test case failed"<<endl;
+    }
+
+}
+
+//getNumValuesInBuffer () empty or full
+//ioffset is negative
+//
+
+
+
 /////////////////////////////////////////////////////////////////////////////////
 // main function
 int main(int argc, char* argv[])
@@ -43,30 +85,19 @@ int main(int argc, char* argv[])
     pfTestSignal = new float [kBlockSize];
     pfTestSignal[0] = 1;                            // Unit impulse
     for(int i=1;i<kBlockSize;i++){
-        pfTestSignal[i] = 0.5;
+        pfTestSignal[i] = 0;
     }
     //////////////////////////////////////////////////////////////////////////////
     // do processing and tests
     
     //Test case I. Fill the buffer with test signal and output values.
-    cout<<"Test case I. Fill the buffer with test signal and output values."<<endl;
-    for(int i=0;i<kBlockSize;i++){
-        pCRingBuffer->putPostInc(pfTestSignal[i]);
-    }
-    
-    for(int i=0;i<3*kBlockSize;i++){
-        cout<<pCRingBuffer->getPostInc()<<endl;  //Should output the buffer once then output garbage twice
-    }
+    cout<<"Test case I. Fill the buffer with test signal and check circular functionality "<<endl;
+    testFillBuffer(pCRingBuffer, pfTestSignal, kBlockSize);
     
     //Test case II. Function calls.
     cout<<"Test case II. Function calls."<<endl;
-    cout<<pCRingBuffer->getWriteIdx()<<endl;    //Should output 1024 (or 0?).
-    pCRingBuffer->put(521);
-    cout<<pCRingBuffer->getReadIdx()<<endl;     //Should output 1024 (or 0?).
-    pCRingBuffer->setReadIdx(pCRingBuffer->getWriteIdx());
-    cout<<pCRingBuffer->getReadIdx()<<endl; // Should  output 1024 (or 0?)
-    cout<<pCRingBuffer->get(0)<<endl; //Should output 123
-    cout<<pCRingBuffer->get(-4098)<<endl; //Should output 123
+    testMethods(pCRingBuffer, pfTestSignal, kBlockSize);
+    
     
 
     cout << "processing done in: \t"    << (clock()-time)*1.F/CLOCKS_PER_SEC << " seconds." << endl;
@@ -74,6 +105,7 @@ int main(int argc, char* argv[])
     //////////////////////////////////////////////////////////////////////////////
     // clean-up
 
+    
     return 0;
 }
 
