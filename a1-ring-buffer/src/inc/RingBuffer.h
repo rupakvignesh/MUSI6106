@@ -41,10 +41,10 @@ public:
     /*! return the value at the current read index
     \return type T the value from the read index
     */
-    T get () const
-    {
-        return m_ptBuff[m_iReadIdx];
-    }
+//    T get () const
+//    {
+//        return m_ptBuff[m_iReadIdx];
+//    }
 
     /*! return the current index for writing/put
     \return int
@@ -61,7 +61,6 @@ public:
     void setWriteIdx (int iNewWriteIdx)
     {
         m_iWriteIdx = iNewWriteIdx;
-        modWriteReadIdx();
     }
 
     /*! return the current index for reading/get
@@ -79,7 +78,6 @@ public:
     void setReadIdx (int iNewReadIdx)
     {
         m_iReadIdx = iNewReadIdx;
-        modWriteReadIdx();
     }
 
     /*! add a new value of type T to write index and increment write index
@@ -88,8 +86,8 @@ public:
     */
     void putPostInc (T tNewValue)
     {
-        modWriteReadIdx();
-        m_ptBuff[m_iWriteIdx++] = tNewValue;
+        idx = mod(m_iWriteIdx++, m_iBuffLength);
+        m_ptBuff[idx] = tNewValue;
     }
 
     /*! return the value at the current read index and increment the read pointer
@@ -97,18 +95,18 @@ public:
     */
     T getPostInc ()
     {
-        modWriteReadIdx();
-        return m_ptBuff[m_iReadIdx++];
+        idx = mod(m_iReadIdx++, m_iBuffLength);
+        return m_ptBuff[idx];
     }
 
     /*! return the value at the index with an arbitrary offset
     \param iOffset: read at offset from read index
     \return type T the value from the read index
     */
-    T get (int iOffset = 0) const //Not working with const???
+    T get (int iOffset = 0) const
     {
-        modWriteReadIdx();
-        return m_ptBuff[m_iReadIdx+iOffset];
+        idx = mod(m_iReadIdx+iOffset, m_iBuffLength);
+        return m_ptBuff[idx];
     }
     
     /*! set buffer content and indices to 0
@@ -132,7 +130,7 @@ public:
     /*! returns the length of the internal buffer
     \return int
     */
-    int getLength () const
+    int getLength () const 
     {
         return m_iBuffLength;
     }
@@ -142,13 +140,14 @@ private:
 
     int m_iBuffLength,              //!< length of the internal buffer
         m_iReadIdx,                 //!< current read index
-        m_iWriteIdx;                //!< current write index
+        m_iWriteIdx,                //!< current write index
+        idx;                        //!< idx with mod 
 
     T   *m_ptBuff;                  //!< data buffer
-    void modWriteReadIdx()
-    {
-        m_iWriteIdx = m_iWriteIdx%m_iBuffLength;
-        m_iReadIdx = m_iReadIdx%m_iBuffLength;
+    
+    int mod(int a, int b) const{
+        int c = a%b;
+        return (c<0) ? c+b : c;
     }
 };
 #endif // __RingBuffer_hdr__
