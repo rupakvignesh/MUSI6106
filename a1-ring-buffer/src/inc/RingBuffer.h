@@ -61,6 +61,8 @@ public:
     void setWriteIdx (int iNewWriteIdx)
     {
         m_iWriteIdx = iNewWriteIdx;
+        assertReadWrite();
+        
     }
 
     /*! return the current index for reading/get
@@ -78,6 +80,8 @@ public:
     void setReadIdx (int iNewReadIdx)
     {
         m_iReadIdx = iNewReadIdx;
+        assertReadWrite();
+        
     }
 
     /*! add a new value of type T to write index and increment write index
@@ -87,6 +91,8 @@ public:
     void putPostInc (T tNewValue)
     {
         m_ptBuff[mod(m_iWriteIdx++, m_iBuffLength)] = tNewValue;
+        assertReadWrite();
+        
     }
 
     /*! return the value at the current read index and increment the read pointer
@@ -95,6 +101,8 @@ public:
     T getPostInc ()
     {
         return m_ptBuff[mod(m_iReadIdx++, m_iBuffLength)];
+        assertReadWrite();
+        
     }
 
     /*! return the value at the index with an arbitrary offset
@@ -121,7 +129,7 @@ public:
     */
     int getNumValuesInBuffer () const
     {
-        return (m_iWriteIdx - m_iReadIdx + m_iBuffLength)%m_iBuffLength;
+        return m_iWriteIdx-m_iReadIdx;      //(m_iWriteIdx - m_iReadIdx + m_iBuffLength)%m_iBuffLength;
     }
 
     /*! returns the length of the internal buffer
@@ -145,5 +153,14 @@ private:
         int c = a%b;
         return (c<0) ? c+b : c;
     }
+    //r,w should not be negative.
+    //w should not overcross read.
+    void assertReadWrite(){
+        assert(m_iReadIdx >= 0);
+        assert(m_iWriteIdx >= 0);
+        assert(m_iWriteIdx - m_iReadIdx <= m_iBuffLength);
+        assert(m_iWriteIdx - m_iReadIdx >=0);
+    }
+    
 };
 #endif // __RingBuffer_hdr__
