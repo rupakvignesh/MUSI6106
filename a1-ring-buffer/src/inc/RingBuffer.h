@@ -63,7 +63,7 @@ public:
 		m_iWriteIdx = iNewWriteIdx;
 		int flag = checkReadWrite();
 		if (flag == 1) {
-			cout << "Buffer full. Will overwrite now.";
+			std::cout << "Check read write indices. They can't take negative values, write index should not over take read index, and read cannot be greater than write "<<std::endl;
 
 		}
 
@@ -86,7 +86,7 @@ public:
 		m_iReadIdx = iNewReadIdx;
 		int flag = checkReadWrite();
 		if (flag == 1) {
-			cout << "Buffer full. Will overwrite now.";
+			std::cout << "Check read write indices. They can't take negative values, write index should not over take read index, and read cannot be greater than write "<<std::endl;
 		}
 
 	}
@@ -100,8 +100,7 @@ public:
 		m_ptBuff[mod(m_iWriteIdx++, m_iBuffLength)] = tNewValue;
 		int flag = checkReadWrite();
 		if (flag == 1) {
-			cout << "Buffer full. Will overwrite now.";
-			char c = getchar();
+			std::cout << "Check read write indices. They can't take negative values, write index should not over take read index, and read cannot be greater than write "<<std::endl;
 		}
 
 	}
@@ -114,7 +113,7 @@ public:
 		return m_ptBuff[mod(m_iReadIdx++, m_iBuffLength)];
 		int flag = checkReadWrite();
 		if (flag == 1) {
-			cout << "Buffer full. Will overwrite now.";
+			std::cout << "Check read write indices. They can't take negative values, write index should not over take read index, and read cannot be greater than write "<<std::endl;
 		}
 
 	}
@@ -157,8 +156,8 @@ private:
 	CRingBuffer();
 	CRingBuffer(const CRingBuffer& that);
 
-	int m_iBuffLength,              //!< length of the internal buffer
-		m_iReadIdx,                 //!< current read index
+    int m_iBuffLength;              //!< length of the internal buffer
+    int	m_iReadIdx,                 //!< current read index
 		m_iWriteIdx;                //!< current write index
 
 	T   *m_ptBuff;                  //!< data buffer

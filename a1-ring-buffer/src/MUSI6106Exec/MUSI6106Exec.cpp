@@ -100,8 +100,7 @@ void testIndexCrossing(CRingBuffer<float> *pCRingBuffer, float* pfTestSignal, in
 	}
 
 
-	pCRingBuffer->putPostInc(0);
-
+	pCRingBuffer->putPostInc(0);                                 //Should give a warning
 }
 
 
