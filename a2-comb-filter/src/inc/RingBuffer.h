@@ -97,14 +97,13 @@ public:
     T get (float fOffset = 0) const
     {
         // Do Linear interpolation
-        
+        while(fOffset<0){
+            fOffset += m_iBuffLength;
+        }
         int iOffset = floor(fOffset);
-        //float frac = fOffset-iOffset;
-        //std::cout<<fOffset<<" "<<(1-frac)<<" "<<frac<<std::endl;
-        //if (m_iReadIdx+iOffset!=m_iBuffLength){
-        //    return (1-frac)*m_ptBuff[m_iReadIdx + iOffset] + (frac)*m_ptBuff[m_iReadIdx+iOffset];
-        //}
-        return m_ptBuff[m_iReadIdx + iOffset];
+        float frac = fOffset-iOffset;
+        return (1-frac)*m_ptBuff[m_iReadIdx + iOffset] + frac*m_ptBuff[m_iReadIdx + iOffset+1];
+        
     }
 
     /*! return the values starting at the current read index
@@ -196,6 +195,7 @@ private:
         }
         iIdx    = (iIdx + iOffset) % m_iBuffLength;
     };
+    
 
     int m_iBuffLength,              //!< length of the internal buffer
         m_iReadIdx,                 //!< current read index
