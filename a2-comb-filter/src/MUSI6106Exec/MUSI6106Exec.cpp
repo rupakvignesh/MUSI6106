@@ -204,6 +204,8 @@ int main(int argc, char* argv[])
     std::fstream            hOutputFile;
     CAudioFileIf::FileSpec_t stFileSpec;
     CCombFilterIf::CombFilterType_t fFilterType;
+    
+    CAudioFileIf            *pCOutputAudio = 0;
 
     CCombFilterIf   *pInstance = 0;
     CCombFilterIf::create(pInstance);
@@ -327,6 +329,16 @@ int main(int argc, char* argv[])
     phAudioFile->getFileSpec(stFileSpec);
 
     //////////////////////////////////////////////////////////////////////////////
+    // open the output wave file
+    CAudioFileIf::create(pCOutputAudio);
+    pCOutputAudio->openFile("output.wav", CAudioFileIf::kFileWrite, &stFileSpec);
+    if (!pCOutputAudio->isOpen())
+    {
+        cout << "Wave file open error!";
+        return -1;
+    }
+    
+    //////////////////////////////////////////////////////////////////////////////
     // open the output text file
     hOutputFile.open(sOutputFilePath.c_str(), std::ios::out);
     if (!hOutputFile.is_open())
@@ -361,7 +373,7 @@ int main(int argc, char* argv[])
         long long iNumFrames = kBlockSize;
         phAudioFile->readData(ppfAudioData, iNumFrames);
         pInstance->process(ppfAudioData, ppfOutputData, iNumFrames);
-
+        pCOutputAudio->writeData(ppfOutputData, iNumFrames);
         cout << "\r" << "reading and writing";
 
         for (int i = 0; i < iNumFrames; i++)
@@ -379,6 +391,7 @@ int main(int argc, char* argv[])
     //////////////////////////////////////////////////////////////////////////////
     // clean-up
     CAudioFileIf::destroy(phAudioFile);
+    CAudioFileIf::destroy(pCOutputAudio);
     hOutputFile.close();
 
     for (int i = 0; i < stFileSpec.iNumChannels; i++)
@@ -390,7 +403,7 @@ int main(int argc, char* argv[])
         delete[] ppfOutputData[i];
     delete[] ppfOutputData;
     ppfOutputData = 0;
-
+    
     return 0;
 
 }

@@ -92,12 +92,17 @@ bool CCombFilterBase::isInParamRange( CCombFilterIf::FilterParam_t eParam, float
 
 Error_t CCombFilterFir::process( float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames )
 {
+    bool flag = false;
     for(int i=0; i<iNumberOfFrames; i++){
         for(int j=0; j<m_iNumChannels; j++){
             ppfOutputBuffer[j][i] = ppfInputBuffer[j][i] + m_afParam[1]*m_ppCRingBuffer[j]->getPostInc(-m_afParam[0]);
             m_ppCRingBuffer[j]->putPostInc(ppfInputBuffer[j][i]);
+            if(ppfOutputBuffer[j][i]>=1 || ppfOutputBuffer[j][i]<-1 )
+                flag = true;
         }
     }
+    if(flag)
+    fprintf( stderr, "The output wave file has been clipped");
     return kNoError;
 }
 
