@@ -28,8 +28,8 @@ CCombFilterBase::CCombFilterBase( int iMaxDelayInFrames, int iNumChannels ) :
     }
     m_aafParamRange[CCombFilterIf::kParamDelay][0] = 0;
     m_aafParamRange[CCombFilterIf::kParamDelay][1] = iMaxDelayInFrames;
-    m_aafParamRange[CCombFilterIf::kParamGain][0] = -1;
-    m_aafParamRange[CCombFilterIf::kParamGain][1] = 1;
+    m_aafParamRange[CCombFilterIf::kParamGain][0] = std::numeric_limits<float>::lowest();
+    m_aafParamRange[CCombFilterIf::kParamGain][1] = std::numeric_limits<float>::max();
     
 }
 
@@ -109,7 +109,8 @@ Error_t CCombFilterFir::process( float **ppfInputBuffer, float **ppfOutputBuffer
 
 CCombFilterIir::CCombFilterIir (int iMaxDelayInFrames, int iNumChannels) : CCombFilterBase(iMaxDelayInFrames, iNumChannels)
 {
-    
+    m_aafParamRange[CCombFilterIf::kParamGain][0] = -1;
+    m_aafParamRange[CCombFilterIf::kParamGain][1] = 1;
 }
 
 Error_t CCombFilterIir::process( float **ppfInputBuffer, float **ppfOutputBuffer, int iNumberOfFrames )
