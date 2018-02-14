@@ -72,9 +72,9 @@ public:
     /*! return the value at the current read index and increment the read pointer
     \return float the value from the read index
     */
-    T getPostInc ()
+    T getPostInc (float fOffset = 0)
     {
-        T tValue = get();
+        T tValue = get(fOffset);
         incIdx(m_iReadIdx);
         return tValue;
     }
@@ -97,12 +97,13 @@ public:
     T get (float fOffset = 0) const
     {
         // Do Linear interpolation
-        while(fOffset<0){
+        while(fOffset < 0){
             fOffset += m_iBuffLength;
         }
         int iOffset = floor(fOffset);
+        int iIdx    = (m_iReadIdx + iOffset) % m_iBuffLength;
         float frac = fOffset-iOffset;
-        return (1-frac)*m_ptBuff[m_iReadIdx + iOffset] + frac*m_ptBuff[m_iReadIdx + iOffset+1];
+        return (1-frac)*m_ptBuff[iIdx] + frac*m_ptBuff[iIdx+1];
         
     }
 
