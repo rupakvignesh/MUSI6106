@@ -1,0 +1,14 @@
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/2018-MUSI6106-master/build/CMakeFiles/RUN_TESTS.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/2018-MUSI6106-master/build/CMakeFiles/ALL_BUILD.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/2018-MUSI6106-master/build/CMakeFiles/ZERO_CHECK.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/2018-MUSI6106-master/build/MUSI6106Exec/CMakeFiles/RUN_TESTS.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/2018-MUSI6106-master/build/MUSI6106Exec/CMakeFiles/MUSI6106Exec.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/2018-MUSI6106-master/build/AudioFileIO/CMakeFiles/RUN_TESTS.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/2018-MUSI6106-master/build/AudioFileIO/CMakeFiles/AudioFileIO.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/2018-MUSI6106-master/build/AudioFileIO/sndlib/CMakeFiles/RUN_TESTS.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/2018-MUSI6106-master/build/AudioFileIO/sndlib/CMakeFiles/sndlib.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/2018-MUSI6106-master/build/CombFilter/CMakeFiles/RUN_TESTS.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/2018-MUSI6106-master/build/CombFilter/CMakeFiles/CombFilter.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/2018-MUSI6106-master/build/TestExec/CMakeFiles/RUN_TESTS.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/2018-MUSI6106-master/build/TestExec/CMakeFiles/TestExec.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/in-class-exercises/2018-MUSI6106-master/build/TestExec/CMakeFiles/UnitTest++.dir
