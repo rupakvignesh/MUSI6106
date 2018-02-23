@@ -1,0 +1,5 @@
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/CMakeFiles/ALL_BUILD.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/CMakeFiles/ZERO_CHECK.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/MUSI6106Exec/CMakeFiles/MUSI6106Exec.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/AudioFileIO/CMakeFiles/AudioFileIO.dir
+/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/AudioFileIO/sndlib/CMakeFiles/sndlib.dir

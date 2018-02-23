@@ -1,0 +1,1208 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		F0797D787D8449668D62795C /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8F729531942D442D9D275763 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				584649AD97774774810E232C /* CMake Rules */,
+			);
+			dependencies = (
+				DD1CF074EC864D5C906EF4AC /* PBXTargetDependency */,
+				619AF051F9934D2D9F930047 /* PBXTargetDependency */,
+				AAA72E206A30475DA21D3B92 /* PBXTargetDependency */,
+				48BD98D1139943598D8B6A27 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		F5C529F093FE4468A5D2481B /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1AA9387EDAF84B2D8CEBA965 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				64C9DD608A134C108BD898A0 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		046824EB2EEF457F8DCF34B5 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sndlib2xen.h */ = {isa = PBXBuildFile; fileRef = 4B85F59C997346C9B1D1FD71 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sndlib2xen.h */; };
+		0497F302DA0C4D11924173D0 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/AudioFile.cpp */ = {isa = PBXBuildFile; fileRef = 9057A7ADE24946E79C2D7311 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/AudioFile.cpp */; };
+		1A721AA3F0B24DF79BACF9D9 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm.h */ = {isa = PBXBuildFile; fileRef = E19B125CDE8C4A049B33E0B1 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm.h */; };
+		1AA49C23A639485DA5ADFFCF /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm-strings.h */ = {isa = PBXBuildFile; fileRef = 7ABBF7CF9F0B4B2CA697417B /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm-strings.h */; };
+		263FDBD2468F4D4E8CC014AB /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/AudioFile.h */ = {isa = PBXBuildFile; fileRef = 6ACBFC36089849BF9BC37FE4 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/AudioFile.h */; };
+		30F6AF9286344D83A3C89C03 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc/RingBuffer.h */ = {isa = PBXBuildFile; fileRef = AB18847FF63D4F47B876DDE4 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc/RingBuffer.h */; };
+		31ED26D952E848BBBE735C6C /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/_sndlib.h */ = {isa = PBXBuildFile; fileRef = 7BCF29AE0AAA44699CCE2BEA /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/_sndlib.h */; };
+		32B4115AE67746C097A168C0 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc/Util.h */ = {isa = PBXBuildFile; fileRef = 399007F2108F47678600A5E3 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc/Util.h */; };
+		3FE1811582D04F7B9E84A21C /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = BF73BB73319B4A3BAEE1C07B /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/CMakeLists.txt */; };
+		45C1392489E548BBA7898337 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/vct.h */ = {isa = PBXBuildFile; fileRef = 29DA8C9510C843029A216D54 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/vct.h */; };
+		484D2AD15CAB444799BFEFEC /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm2xen.h */ = {isa = PBXBuildFile; fileRef = D4F61F8126434476BD961E60 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm2xen.h */; };
+		49132824CFC447F0B91F3135 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/xen.h */ = {isa = PBXBuildFile; fileRef = DF274A3F37A547C58498AFA7 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/xen.h */; };
+		4B57071CC97543C8854599BF /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sound.c */ = {isa = PBXBuildFile; fileRef = 4667C5943C984D2F81A78A59 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sound.c */; };
+		67FCFE5D67344091884C3DA6 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/s7.h */ = {isa = PBXBuildFile; fileRef = CC17BA15D5724AA997D8CD54 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/s7.h */; };
+		6BC6CA109248437F92402DD6 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm.c */ = {isa = PBXBuildFile; fileRef = 8873D74152814F3DB62CA67E /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm.c */; };
+		7272326E56954913A78B9743 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/MUSI6106Exec/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = BEFBC4CD3E4249DEB2CFEF71 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/MUSI6106Exec/CMakeLists.txt */; };
+		853D548F7BE24C2191F2AE8F /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/vct.c */ = {isa = PBXBuildFile; fileRef = 51C69518933B4F2AAAA3CB6E /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/vct.c */; };
+		899F24CCBA2B437A8941D5AC /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sndlib2xen.c */ = {isa = PBXBuildFile; fileRef = 4ADFEDE4DF1E4DBB82845948 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sndlib2xen.c */; };
+		B6BDF784510E4C3080CCE007 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc/AudioFileIf.h */ = {isa = PBXBuildFile; fileRef = 3292B45F376447BA857745F1 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc/AudioFileIf.h */; };
+		C0BB5D8380C84C0EA37D510C /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/s7.c */ = {isa = PBXBuildFile; fileRef = 61D5FE6E9FBE4F829572324D /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/s7.c */; };
+		C31C0CB45FCE4CD9A9E9DB1D /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc/Vector.h */ = {isa = PBXBuildFile; fileRef = 0EFA0E27CCE5482D895F8610 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc/Vector.h */; };
+		C343FD218E07442AAA571E01 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/mus-config.h */ = {isa = PBXBuildFile; fileRef = 9DABEB6F12CB46278CBA47B3 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/mus-config.h */; };
+		C4F9937138A1467297D38BF1 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/MUSI6106Exec/MUSI6106Exec.cpp */ = {isa = PBXBuildFile; fileRef = 4DB9013998E141D48C6A6349 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/MUSI6106Exec/MUSI6106Exec.cpp */; };
+		CD33445088BC49ABAD530669 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/xen.c */ = {isa = PBXBuildFile; fileRef = 27BC2EEDED8A4374B96D8F97 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/xen.c */; };
+		D02DA966A2734550A552214F /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/io.c */ = {isa = PBXBuildFile; fileRef = 1D388422CC9647E9B6A5C017 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/io.c */; };
+		D04BD69196D8434281F3B2E4 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/AudioFileIf.cpp */ = {isa = PBXBuildFile; fileRef = F17082DC4A5148A2B257EB7D /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/AudioFileIf.cpp */; };
+		D5E79E8BD71341D293FD073C /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sndlib-strings.h */ = {isa = PBXBuildFile; fileRef = D558C36FA1D84822B28D98BA /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sndlib-strings.h */; };
+		D9DC4A6960DF48BD9A6F77C3 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/audio.c */ = {isa = PBXBuildFile; fileRef = B3350F5072DE4911A45D4CB9 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/audio.c */; };
+		DE67CA0B20454C4BB0DF8EE8 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/unix-config.h */ = {isa = PBXBuildFile; fileRef = 6FEC16F6828E4711B12E8492 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/unix-config.h */; };
+		E9682DB566B947AAA780B70B /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 7D3797EE5CAF4F89BF55ADBF /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/CMakeLists.txt */; };
+		ECC405B2D5D54E40AFCEC772 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/headers.c */ = {isa = PBXBuildFile; fileRef = 166F98AE58294D929DB4CA74 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/headers.c */; };
+		F11D48B33CA2401DB89E0E4A /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sndlib.h */ = {isa = PBXBuildFile; fileRef = B78BAC4DF1694B5ABB155AB9 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sndlib.h */; };
+		FC5D88841F8A4506819C7B2C /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm2xen.c */ = {isa = PBXBuildFile; fileRef = 9CE0BC1CDA9647358BD75B2F /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm2xen.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		22F7EFB964B34438BF3F84C8 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		461787A864D14DEAA9FED211 = {
+			isa = PBXBuildStyle;
+		};
+		B9FDA60D1EED42E09812A757 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		E7AFCB82594740E4A98840B8 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		EA0C5B69C3944A4DA00904BA /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		080E0660083E4126AC2F2C4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0A1FF90D5D448A0AD437117 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E985344358AD482FBF025E40;
+			remoteInfo = AudioFileIO;
+		};
+		1D4202B939CC48FBB54A6387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0A1FF90D5D448A0AD437117 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D0AEFF07FB0435A89258BF5;
+			remoteInfo = sndlib;
+		};
+		4DA45B724B3E4DA6BB61BA00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0A1FF90D5D448A0AD437117 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5C529F093FE4468A5D2481B;
+			remoteInfo = ZERO_CHECK;
+		};
+		71413D17F15543F58F30497C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0A1FF90D5D448A0AD437117 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D0AEFF07FB0435A89258BF5;
+			remoteInfo = sndlib;
+		};
+		7D57D4E3A8294F09AC7B4D64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0A1FF90D5D448A0AD437117 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5C529F093FE4468A5D2481B;
+			remoteInfo = ZERO_CHECK;
+		};
+		80D0FC3E63EE489099E8DFAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0A1FF90D5D448A0AD437117 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7009B7194A8245A38D340237;
+			remoteInfo = MUSI6106Exec;
+		};
+		A50562DB501C4936BB5A339A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0A1FF90D5D448A0AD437117 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D0AEFF07FB0435A89258BF5;
+			remoteInfo = sndlib;
+		};
+		BFC1409763BE45EEB528E6A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0A1FF90D5D448A0AD437117 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5C529F093FE4468A5D2481B;
+			remoteInfo = ZERO_CHECK;
+		};
+		C7E13CC610414D5FB0077ADD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0A1FF90D5D448A0AD437117 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E985344358AD482FBF025E40;
+			remoteInfo = AudioFileIO;
+		};
+		E14C1A2BEC63498D88001B5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0A1FF90D5D448A0AD437117 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5C529F093FE4468A5D2481B;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0EFA0E27CCE5482D895F8610 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc/Vector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Vector.h; path = src/inc/Vector.h; sourceTree = SOURCE_ROOT; };
+		166F98AE58294D929DB4CA74 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/headers.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = headers.c; path = 3rdparty/sndlib/headers.c; sourceTree = SOURCE_ROOT; };
+		1D388422CC9647E9B6A5C017 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/io.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = io.c; path = 3rdparty/sndlib/io.c; sourceTree = SOURCE_ROOT; };
+		27BC2EEDED8A4374B96D8F97 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/xen.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = xen.c; path = 3rdparty/sndlib/xen.c; sourceTree = SOURCE_ROOT; };
+		29DA8C9510C843029A216D54 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/vct.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vct.h; path = 3rdparty/sndlib/vct.h; sourceTree = SOURCE_ROOT; };
+		3292B45F376447BA857745F1 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc/AudioFileIf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AudioFileIf.h; path = src/inc/AudioFileIf.h; sourceTree = SOURCE_ROOT; };
+		399007F2108F47678600A5E3 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc/Util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Util.h; path = src/inc/Util.h; sourceTree = SOURCE_ROOT; };
+		4667C5943C984D2F81A78A59 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sound.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sound.c; path = 3rdparty/sndlib/sound.c; sourceTree = SOURCE_ROOT; };
+		46F9D796F37D48CDB85E453B /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		49313C77382B416B877FC740 /* sndlib */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libsndlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ADFEDE4DF1E4DBB82845948 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sndlib2xen.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sndlib2xen.c; path = 3rdparty/sndlib/sndlib2xen.c; sourceTree = SOURCE_ROOT; };
+		4B85F59C997346C9B1D1FD71 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sndlib2xen.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sndlib2xen.h; path = 3rdparty/sndlib/sndlib2xen.h; sourceTree = SOURCE_ROOT; };
+		4DB9013998E141D48C6A6349 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/MUSI6106Exec/MUSI6106Exec.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = MUSI6106Exec.cpp; path = src/MUSI6106Exec/MUSI6106Exec.cpp; sourceTree = SOURCE_ROOT; };
+		51C69518933B4F2AAAA3CB6E /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/vct.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vct.c; path = 3rdparty/sndlib/vct.c; sourceTree = SOURCE_ROOT; };
+		602C5EC82AB74DCFB05436F3 /* MUSI6106Exec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = MUSI6106Exec; sourceTree = BUILT_PRODUCTS_DIR; };
+		61D5FE6E9FBE4F829572324D /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/s7.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = s7.c; path = 3rdparty/sndlib/s7.c; sourceTree = SOURCE_ROOT; };
+		6ACBFC36089849BF9BC37FE4 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/AudioFile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AudioFile.h; path = src/AudioFileIO/AudioFile.h; sourceTree = SOURCE_ROOT; };
+		6FEC16F6828E4711B12E8492 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/unix-config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = "unix-config.h"; path = "3rdparty/sndlib/unix-config.h"; sourceTree = SOURCE_ROOT; };
+		7ABBF7CF9F0B4B2CA697417B /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm-strings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = "clm-strings.h"; path = "3rdparty/sndlib/clm-strings.h"; sourceTree = SOURCE_ROOT; };
+		7BCF29AE0AAA44699CCE2BEA /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/_sndlib.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = _sndlib.h; path = 3rdparty/sndlib/_sndlib.h; sourceTree = SOURCE_ROOT; };
+		7D3797EE5CAF4F89BF55ADBF /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/AudioFileIO/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		8873D74152814F3DB62CA67E /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = clm.c; path = 3rdparty/sndlib/clm.c; sourceTree = SOURCE_ROOT; };
+		9057A7ADE24946E79C2D7311 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/AudioFile.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AudioFile.cpp; path = src/AudioFileIO/AudioFile.cpp; sourceTree = SOURCE_ROOT; };
+		9CE0BC1CDA9647358BD75B2F /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm2xen.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = clm2xen.c; path = 3rdparty/sndlib/clm2xen.c; sourceTree = SOURCE_ROOT; };
+		9DABEB6F12CB46278CBA47B3 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/mus-config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = "mus-config.h"; path = "3rdparty/sndlib/mus-config.h"; sourceTree = SOURCE_ROOT; };
+		AB18847FF63D4F47B876DDE4 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc/RingBuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = RingBuffer.h; path = src/inc/RingBuffer.h; sourceTree = SOURCE_ROOT; };
+		AD9EB318C7844CAB929D3ED8 /* AudioFileIO */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAudioFileIO.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3350F5072DE4911A45D4CB9 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/audio.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = audio.c; path = 3rdparty/sndlib/audio.c; sourceTree = SOURCE_ROOT; };
+		B78BAC4DF1694B5ABB155AB9 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sndlib.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sndlib.h; path = 3rdparty/sndlib/sndlib.h; sourceTree = SOURCE_ROOT; };
+		B7E9858BC0B040BF9BC4C6DD /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		BEFBC4CD3E4249DEB2CFEF71 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/MUSI6106Exec/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/MUSI6106Exec/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		BF73BB73319B4A3BAEE1C07B /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = 3rdparty/sndlib/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		CC17BA15D5724AA997D8CD54 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/s7.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = s7.h; path = 3rdparty/sndlib/s7.h; sourceTree = SOURCE_ROOT; };
+		D4F61F8126434476BD961E60 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm2xen.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = clm2xen.h; path = 3rdparty/sndlib/clm2xen.h; sourceTree = SOURCE_ROOT; };
+		D558C36FA1D84822B28D98BA /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sndlib-strings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = "sndlib-strings.h"; path = "3rdparty/sndlib/sndlib-strings.h"; sourceTree = SOURCE_ROOT; };
+		DF274A3F37A547C58498AFA7 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/xen.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = xen.h; path = 3rdparty/sndlib/xen.h; sourceTree = SOURCE_ROOT; };
+		E19B125CDE8C4A049B33E0B1 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = clm.h; path = 3rdparty/sndlib/clm.h; sourceTree = SOURCE_ROOT; };
+		F17082DC4A5148A2B257EB7D /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/AudioFileIf.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AudioFileIf.cpp; path = src/AudioFileIO/AudioFileIf.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		13474D7C85EC4517A0F76EF4 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		152927AB72BA4238A3B67D53 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3350F5072DE4911A45D4CB9 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/audio.c */,
+				8873D74152814F3DB62CA67E /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm.c */,
+				9CE0BC1CDA9647358BD75B2F /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm2xen.c */,
+				166F98AE58294D929DB4CA74 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/headers.c */,
+				1D388422CC9647E9B6A5C017 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/io.c */,
+				61D5FE6E9FBE4F829572324D /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/s7.c */,
+				4ADFEDE4DF1E4DBB82845948 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sndlib2xen.c */,
+				4667C5943C984D2F81A78A59 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sound.c */,
+				51C69518933B4F2AAAA3CB6E /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/vct.c */,
+				27BC2EEDED8A4374B96D8F97 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/xen.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		18CE6ADB217F462AA6F6B364 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1DCE538B8E5B449085BDF53D /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				13474D7C85EC4517A0F76EF4 /* CMake Rules */,
+				46F9D796F37D48CDB85E453B /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		1DD2D29E85C74FD184A5C198 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				9F1DD785BAF84C62A457E20D /* CMake Rules */,
+				B7E9858BC0B040BF9BC4C6DD /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		28D10B7DB13B4964BC16267C /* sndlib */ = {
+			isa = PBXGroup;
+			children = (
+				152927AB72BA4238A3B67D53 /* Source Files */,
+				922FAC3F1D8E42BF99BC1DDB /* Header Files */,
+				BF73BB73319B4A3BAEE1C07B /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/CMakeLists.txt */,
+			);
+			name = sndlib;
+			sourceTree = "<group>";
+		};
+		31BB865583274AEE8970C482 = {
+			isa = PBXGroup;
+			children = (
+				9AA0B5D3B3704FDA80AB08B8 /* Sources */,
+				18CE6ADB217F462AA6F6B364 /* Resources */,
+				79DE9E66276C4016A5811D9A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67EC2556BF1B40F6ADCC7970 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				3292B45F376447BA857745F1 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc/AudioFileIf.h */,
+				AB18847FF63D4F47B876DDE4 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc/RingBuffer.h */,
+				399007F2108F47678600A5E3 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc/Util.h */,
+				0EFA0E27CCE5482D895F8610 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc/Vector.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		79DE9E66276C4016A5811D9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				602C5EC82AB74DCFB05436F3 /* MUSI6106Exec */,
+				AD9EB318C7844CAB929D3ED8 /* AudioFileIO */,
+				49313C77382B416B877FC740 /* sndlib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		922FAC3F1D8E42BF99BC1DDB /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				7BCF29AE0AAA44699CCE2BEA /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/_sndlib.h */,
+				7ABBF7CF9F0B4B2CA697417B /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm-strings.h */,
+				E19B125CDE8C4A049B33E0B1 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm.h */,
+				D4F61F8126434476BD961E60 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm2xen.h */,
+				9DABEB6F12CB46278CBA47B3 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/mus-config.h */,
+				CC17BA15D5724AA997D8CD54 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/s7.h */,
+				D558C36FA1D84822B28D98BA /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sndlib-strings.h */,
+				B78BAC4DF1694B5ABB155AB9 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sndlib.h */,
+				4B85F59C997346C9B1D1FD71 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sndlib2xen.h */,
+				6FEC16F6828E4711B12E8492 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/unix-config.h */,
+				29DA8C9510C843029A216D54 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/vct.h */,
+				DF274A3F37A547C58498AFA7 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/xen.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		9AA0B5D3B3704FDA80AB08B8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1DCE538B8E5B449085BDF53D /* ALL_BUILD */,
+				1DD2D29E85C74FD184A5C198 /* ZERO_CHECK */,
+				B2EE94D7FCEA42DB8DD97276 /* MUSI6106Exec */,
+				A36DE2012B274C87A364759E /* AudioFileIO */,
+				28D10B7DB13B4964BC16267C /* sndlib */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		9F1DD785BAF84C62A457E20D /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		A36DE2012B274C87A364759E /* AudioFileIO */ = {
+			isa = PBXGroup;
+			children = (
+				DC02F147EF4047FEBBE3D5B7 /* Source Files */,
+				CBC27F4204D24321B42AA12B /* Header Files */,
+				7D3797EE5CAF4F89BF55ADBF /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/CMakeLists.txt */,
+			);
+			name = AudioFileIO;
+			sourceTree = "<group>";
+		};
+		B2EE94D7FCEA42DB8DD97276 /* MUSI6106Exec */ = {
+			isa = PBXGroup;
+			children = (
+				EB1167DE050F4257B24DAEC2 /* Source Files */,
+				67EC2556BF1B40F6ADCC7970 /* Header Files */,
+				BEFBC4CD3E4249DEB2CFEF71 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/MUSI6106Exec/CMakeLists.txt */,
+			);
+			name = MUSI6106Exec;
+			sourceTree = "<group>";
+		};
+		CBC27F4204D24321B42AA12B /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				6ACBFC36089849BF9BC37FE4 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/AudioFile.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		DC02F147EF4047FEBBE3D5B7 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				9057A7ADE24946E79C2D7311 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/AudioFile.cpp */,
+				F17082DC4A5148A2B257EB7D /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/AudioFileIf.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		EB1167DE050F4257B24DAEC2 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DB9013998E141D48C6A6349 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/MUSI6106Exec/MUSI6106Exec.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D0AEFF07FB0435A89258BF5 /* sndlib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E2E4D1827A646DFB7411C9C /* Build configuration list for PBXNativeTarget "sndlib" */;
+			buildPhases = (
+				B628225E74FC409CB30C315A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F5E25ABB86C460F88FDEDDB /* PBXTargetDependency */,
+			);
+			name = sndlib;
+			productName = sndlib;
+			productReference = 49313C77382B416B877FC740 /* sndlib */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7009B7194A8245A38D340237 /* MUSI6106Exec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A2C8D39A3A741A082BE700B /* Build configuration list for PBXNativeTarget "MUSI6106Exec" */;
+			buildPhases = (
+				4E38404C8AB74EC098E3ADB0 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A990406285C4459DAFE54A94 /* PBXTargetDependency */,
+				FD510242B8A2451090B8E3A6 /* PBXTargetDependency */,
+				F0D463A0D3B849319B83A003 /* PBXTargetDependency */,
+			);
+			name = MUSI6106Exec;
+			productName = MUSI6106Exec;
+			productReference = 602C5EC82AB74DCFB05436F3 /* MUSI6106Exec */;
+			productType = "com.apple.product-type.tool";
+		};
+		E985344358AD482FBF025E40 /* AudioFileIO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 672DD92F7B9E439499F939E0 /* Build configuration list for PBXNativeTarget "AudioFileIO" */;
+			buildPhases = (
+				2601310EB9D74EE98BAC6E3A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2E865B0A368460185DB86BF /* PBXTargetDependency */,
+				4480C24A7B1A4D3AA6FF6B77 /* PBXTargetDependency */,
+			);
+			name = AudioFileIO;
+			productName = AudioFileIO;
+			productReference = AD9EB318C7844CAB929D3ED8 /* AudioFileIO */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0A1FF90D5D448A0AD437117 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0730;
+			};
+			buildConfigurationList = 1219966F7DAC465081C25919 /* Build configuration list for PBXProject "MUSI6106" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				E7AFCB82594740E4A98840B8 /* Debug */,
+				22F7EFB964B34438BF3F84C8 /* Release */,
+				B9FDA60D1EED42E09812A757 /* MinSizeRel */,
+				EA0C5B69C3944A4DA00904BA /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 31BB865583274AEE8970C482;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				F0797D787D8449668D62795C /* ALL_BUILD */,
+				F5C529F093FE4468A5D2481B /* ZERO_CHECK */,
+				7009B7194A8245A38D340237 /* MUSI6106Exec */,
+				E985344358AD482FBF025E40 /* AudioFileIO */,
+				1D0AEFF07FB0435A89258BF5 /* sndlib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C7A062A2CEA4DA78C2F67D6 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		584649AD97774774810E232C /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld -f /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		64C9DD608A134C108BD898A0 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld -f /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		8E0C91A347874527AD71EEE4 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2601310EB9D74EE98BAC6E3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0497F302DA0C4D11924173D0 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/AudioFile.cpp */,
+				D04BD69196D8434281F3B2E4 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/AudioFileIO/AudioFileIf.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E38404C8AB74EC098E3ADB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4F9937138A1467297D38BF1 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/MUSI6106Exec/MUSI6106Exec.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B628225E74FC409CB30C315A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9DC4A6960DF48BD9A6F77C3 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/audio.c */,
+				6BC6CA109248437F92402DD6 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm.c */,
+				FC5D88841F8A4506819C7B2C /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/clm2xen.c */,
+				ECC405B2D5D54E40AFCEC772 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/headers.c */,
+				D02DA966A2734550A552214F /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/io.c */,
+				C0BB5D8380C84C0EA37D510C /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/s7.c */,
+				899F24CCBA2B437A8941D5AC /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sndlib2xen.c */,
+				4B57071CC97543C8854599BF /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/sound.c */,
+				853D548F7BE24C2191F2AE8F /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/vct.c */,
+				CD33445088BC49ABAD530669 /* /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib/xen.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F5E25ABB86C460F88FDEDDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5C529F093FE4468A5D2481B /* ZERO_CHECK */;
+			targetProxy = 7D57D4E3A8294F09AC7B4D64 /* PBXContainerItemProxy */;
+		};
+		4480C24A7B1A4D3AA6FF6B77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5C529F093FE4468A5D2481B /* ZERO_CHECK */;
+			targetProxy = BFC1409763BE45EEB528E6A3 /* PBXContainerItemProxy */;
+		};
+		48BD98D1139943598D8B6A27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5C529F093FE4468A5D2481B /* ZERO_CHECK */;
+			targetProxy = 4DA45B724B3E4DA6BB61BA00 /* PBXContainerItemProxy */;
+		};
+		619AF051F9934D2D9F930047 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E985344358AD482FBF025E40 /* AudioFileIO */;
+			targetProxy = 080E0660083E4126AC2F2C4E /* PBXContainerItemProxy */;
+		};
+		A990406285C4459DAFE54A94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E985344358AD482FBF025E40 /* AudioFileIO */;
+			targetProxy = C7E13CC610414D5FB0077ADD /* PBXContainerItemProxy */;
+		};
+		AAA72E206A30475DA21D3B92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D0AEFF07FB0435A89258BF5 /* sndlib */;
+			targetProxy = A50562DB501C4936BB5A339A /* PBXContainerItemProxy */;
+		};
+		B2E865B0A368460185DB86BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D0AEFF07FB0435A89258BF5 /* sndlib */;
+			targetProxy = 1D4202B939CC48FBB54A6387 /* PBXContainerItemProxy */;
+		};
+		DD1CF074EC864D5C906EF4AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7009B7194A8245A38D340237 /* MUSI6106Exec */;
+			targetProxy = 80D0FC3E63EE489099E8DFAB /* PBXContainerItemProxy */;
+		};
+		F0D463A0D3B849319B83A003 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5C529F093FE4468A5D2481B /* ZERO_CHECK */;
+			targetProxy = E14C1A2BEC63498D88001B5F /* PBXContainerItemProxy */;
+		};
+		FD510242B8A2451090B8E3A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D0AEFF07FB0435A89258BF5 /* sndlib */;
+			targetProxy = 71413D17F15543F58F30497C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		065A9BDDC8E04675A31AD9F3 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		23C5BFDA7B804B4E8E4C3E7C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/build";
+			};
+			name = MinSizeRel;
+		};
+		48F84FB6E1014595ABF8F4F5 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = AudioFileIO;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/AudioFileIO";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		5BEDF189C35D4CF58CE32DD3 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bin/relwithdebinfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/inc");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/lib/relwithdebinfo/libAudioFileIO.a /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/lib/relwithdebinfo/libsndlib.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MUSI6106Exec;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/MUSI6106Exec";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		5CE007C994334CDAA6B9F63B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		6878AB597EFC4B36B6D93E97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bin/debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/inc");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/lib/debug/libAudioFileIO.a /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/lib/debug/libsndlib.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MUSI6106Exec;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/MUSI6106Exec";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		6B7279C4E9684E98ADC1A212 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/lib/debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   -w  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sndlib;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/AudioFileIO/sndlib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		6E28CDF85A1149FD8030003C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/lib/relwithdebinfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG -w  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sndlib;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/AudioFileIO/sndlib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		805B60B6E254427CBA137865 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		8AE6EDD0BC90406D9624B21B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/lib/release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -w  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sndlib;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/AudioFileIO/sndlib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		8E12D681A0164B1FA8891F9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		97B05B3B607643EFAC19BAB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/build";
+			};
+			name = Debug;
+		};
+		9AC6EFC17AE34B939F19D82A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		A12F4F0D04CA49689B96B054 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/lib/relwithdebinfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = AudioFileIO;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/AudioFileIO";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		B8D9B354FBC44CA6AD43CD5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/lib/debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = AudioFileIO;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/AudioFileIO";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		C65835CBE2E84B6885C3335C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		DBEC043D29A84A55945F71A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		DCE6B0209B604261A1A38D60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/build";
+			};
+			name = Release;
+		};
+		E2FDD8D319F9487EA98DEEFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/lib/release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = AudioFileIO;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/AudioFileIO";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		EC1124C0892F4C2B9757C706 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/3rdparty/sndlib");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -w  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sndlib;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/AudioFileIO/sndlib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		EF112583C5474EAE9AA5E36F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bin/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/inc");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/lib/MinSizeRel/libAudioFileIO.a /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/lib/MinSizeRel/libsndlib.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MUSI6106Exec;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/MUSI6106Exec";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		F04EF0D25C694E8EB9C4AA24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bin/release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/src/inc","/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/inc");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/lib/release/libAudioFileIO.a /Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/lib/release/libsndlib.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MUSI6106Exec;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/MUSI6106Exec";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		F142299A03CB417DA6162366 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld/build";
+			};
+			name = RelWithDebInfo;
+		};
+		FFEC640685DA4596A5D83267 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/RupakVignesh/Desktop/spring18/MUSI6106/a3-vibrato/bld";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E2E4D1827A646DFB7411C9C /* Build configuration list for PBXNativeTarget "sndlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B7279C4E9684E98ADC1A212 /* Debug */,
+				8AE6EDD0BC90406D9624B21B /* Release */,
+				EC1124C0892F4C2B9757C706 /* MinSizeRel */,
+				6E28CDF85A1149FD8030003C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1219966F7DAC465081C25919 /* Build configuration list for PBXProject "MUSI6106" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97B05B3B607643EFAC19BAB0 /* Debug */,
+				DCE6B0209B604261A1A38D60 /* Release */,
+				23C5BFDA7B804B4E8E4C3E7C /* MinSizeRel */,
+				F142299A03CB417DA6162366 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1AA9387EDAF84B2D8CEBA965 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE007C994334CDAA6B9F63B /* Debug */,
+				DBEC043D29A84A55945F71A3 /* Release */,
+				065A9BDDC8E04675A31AD9F3 /* MinSizeRel */,
+				C65835CBE2E84B6885C3335C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3A2C8D39A3A741A082BE700B /* Build configuration list for PBXNativeTarget "MUSI6106Exec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6878AB597EFC4B36B6D93E97 /* Debug */,
+				F04EF0D25C694E8EB9C4AA24 /* Release */,
+				EF112583C5474EAE9AA5E36F /* MinSizeRel */,
+				5BEDF189C35D4CF58CE32DD3 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		672DD92F7B9E439499F939E0 /* Build configuration list for PBXNativeTarget "AudioFileIO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8D9B354FBC44CA6AD43CD5F /* Debug */,
+				E2FDD8D319F9487EA98DEEFC /* Release */,
+				48F84FB6E1014595ABF8F4F5 /* MinSizeRel */,
+				A12F4F0D04CA49689B96B054 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8F729531942D442D9D275763 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFEC640685DA4596A5D83267 /* Debug */,
+				8E12D681A0164B1FA8891F9F /* Release */,
+				805B60B6E254427CBA137865 /* MinSizeRel */,
+				9AC6EFC17AE34B939F19D82A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0A1FF90D5D448A0AD437117 /* Project object */;
+}
