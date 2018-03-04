@@ -16,20 +16,31 @@ class CVibrato
 {
 public:
 
-    CVibrato (int iMaxDelayInFrames, int iNumChannels);
+    CVibrato ();
     virtual ~CVibrato ();
     
     Error_t resetInstance ();
     
     /*! list of parameters for the Vibrato */
-    enum FilterParam_t
+    enum VibratoParam_t
     {
         kParamWidth,                     //!< Width = amplitude for oscillation
-        kParamDelay,                    //!< delay in seconds for specification of comb width
         kParamModFreq,
         
-        kNumFilterParams
+        kNumVibratoParams
     };
+    
+    /*! creates a new comb filter instance
+     \param pCCombFilterIf pointer to the new class
+     \return Error_t
+     */
+    static Error_t create (CVibrato*& pCVibrato);
+    
+    /*! destroys a comb filter instance
+     \param pCCombFilterIf pointer to the class to be destroyed
+     \return Error_t
+     */
+    static Error_t destroy (CVibrato*& pCVibrato);
     
     /*! initializes a comb filter instance
      \param eFilterType FIR or IIR
@@ -38,7 +49,7 @@ public:
      \param iNumChannels number of audio channels
      \return Error_t
      */
-    Error_t init (float fMaxDelayLengthInS, float fSampleRateInHz, int iNumChannels);
+    Error_t init (float fMaxWidthInS, float fSampleRateInHz, int iNumChannels, float fModFreq, float fModWidth);
     
     /*! resets the internal variables (requires new call of init)
      \return Error_t
@@ -50,13 +61,13 @@ public:
      \param fParamValue value of the parameter
      \return Error_t
      */
-    Error_t setParam (FilterParam_t eParam, float fParamValue);
+    Error_t setParam (VibratoParam_t eParam, float fParamValue);
     
     /*! return the value of the specified parameter
      \param eParam
      \return float
      */
-    float   getParam (FilterParam_t eParam) const;
+    float   getParam (VibratoParam_t eParam) const;
     
     /*! processes one block of audio
      \param ppfInputBuffer input buffer [numChannels][iNumberOfFrames]
@@ -70,15 +81,17 @@ public:
     
 private:
     CRingBuffer<float>  **m_ppCRingBuffer;
+    CLfo                *m_pCLfo;
     
-    float   m_afParam[CVibrato::kNumFilterParams];
-    float   m_aafParamRange[CVibrato::kNumFilterParams][2];
+    float               m_afParam[CVibrato::kNumVibratoParams];
     
-    int     m_iNumChannels;
+    int                 m_iNumChannels;
     
-    bool            m_bIsInitialized;   //!< internal bool to check whether the init function has been called
+    float               m_fMaxWidthInS;
     
-    float           m_fSampleRate;      //!< audio sample rate in Hz
+    bool                m_bIsInitialized;   //!< internal bool to check whether the init function has been called
+    
+    float               m_fSampleRateInHz;      //!< audio sample rate in Hz
 
 };
 
