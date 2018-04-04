@@ -69,6 +69,9 @@ private:
     Directions_t **ppEbackTrack;
     int m_iNumRows, m_iNumCols;
     bool m_bIsInitialized;
+    int **ppiPathResult;
+    int m_iDtwPathLength;
+    
 };
 
 
