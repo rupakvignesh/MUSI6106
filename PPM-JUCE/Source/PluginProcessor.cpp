@@ -10,10 +10,9 @@
 
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
-
-
+#include <iostream>
 //==============================================================================
-NewProjectAudioProcessor::NewProjectAudioProcessor()
+PpmAudioProcessor::PpmAudioProcessor()
 #ifndef JucePlugin_PreferredChannelConfigurations
      : AudioProcessor (BusesProperties()
                      #if ! JucePlugin_IsMidiEffect
@@ -22,22 +21,25 @@ NewProjectAudioProcessor::NewProjectAudioProcessor()
                       #endif
                        .withOutput ("Output", AudioChannelSet::stereo(), true)
                      #endif
-                       )
+                       ),
+                       m_pCPpm(0),
+                       m_bIsready(false)
 #endif
 {
+    CPpm::createInstance(m_pCPpm);
 }
 
-NewProjectAudioProcessor::~NewProjectAudioProcessor()
+PpmAudioProcessor::~PpmAudioProcessor()
 {
 }
 
 //==============================================================================
-const String NewProjectAudioProcessor::getName() const
+const String PpmAudioProcessor::getName() const
 {
     return JucePlugin_Name;
 }
 
-bool NewProjectAudioProcessor::acceptsMidi() const
+bool PpmAudioProcessor::acceptsMidi() const
 {
    #if JucePlugin_WantsMidiInput
     return true;
@@ -46,7 +48,7 @@ bool NewProjectAudioProcessor::acceptsMidi() const
    #endif
 }
 
-bool NewProjectAudioProcessor::producesMidi() const
+bool PpmAudioProcessor::producesMidi() const
 {
    #if JucePlugin_ProducesMidiOutput
     return true;
@@ -55,7 +57,7 @@ bool NewProjectAudioProcessor::producesMidi() const
    #endif
 }
 
-bool NewProjectAudioProcessor::isMidiEffect() const
+bool PpmAudioProcessor::isMidiEffect() const
 {
    #if JucePlugin_IsMidiEffect
     return true;
@@ -64,50 +66,49 @@ bool NewProjectAudioProcessor::isMidiEffect() const
    #endif
 }
 
-double NewProjectAudioProcessor::getTailLengthSeconds() const
+double PpmAudioProcessor::getTailLengthSeconds() const
 {
     return 0.0;
 }
 
-int NewProjectAudioProcessor::getNumPrograms()
+int PpmAudioProcessor::getNumPrograms()
 {
     return 1;   // NB: some hosts don't cope very well if you tell them there are 0 programs,
                 // so this should be at least 1, even if you're not really implementing programs.
 }
 
-int NewProjectAudioProcessor::getCurrentProgram()
+int PpmAudioProcessor::getCurrentProgram()
 {
     return 0;
 }
 
-void NewProjectAudioProcessor::setCurrentProgram (int index)
+void PpmAudioProcessor::setCurrentProgram (int index)
 {
 }
 
-const String NewProjectAudioProcessor::getProgramName (int index)
+const String PpmAudioProcessor::getProgramName (int index)
 {
     return {};
 }
 
-void NewProjectAudioProcessor::changeProgramName (int index, const String& newName)
+void PpmAudioProcessor::changeProgramName (int index, const String& newName)
 {
 }
 
 //==============================================================================
-void NewProjectAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
+void PpmAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    // Use this method as the place to do any pre-playback
-    // initialisation that you need..
+    m_pCPpm->init(sampleRate, getTotalNumInputChannels());
+    m_bIsready = true;
 }
 
-void NewProjectAudioProcessor::releaseResources()
+void PpmAudioProcessor::releaseResources()
 {
-    // When playback stops, you can use this as an opportunity to free up any
-    // spare memory, etc.
+    m_pCPpm->destroyInstance(m_pCPpm);
 }
 
 #ifndef JucePlugin_PreferredChannelConfigurations
-bool NewProjectAudioProcessor::isBusesLayoutSupported (const BusesLayout& layouts) const
+bool PpmAudioProcessor::isBusesLayoutSupported (const BusesLayout& layouts) const
 {
   #if JucePlugin_IsMidiEffect
     ignoreUnused (layouts);
@@ -130,63 +131,58 @@ bool NewProjectAudioProcessor::isBusesLayoutSupported (const BusesLayout& layout
 }
 #endif
 
-void NewProjectAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffer& midiMessages)
+void PpmAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffer& midiMessages)
 {
     ScopedNoDenormals noDenormals;
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
-    // In case we have more outputs than inputs, this code clears any output
-    // channels that didn't contain input data, (because these aren't
-    // guaranteed to be empty - they may contain garbage).
-    // This is here to avoid people getting screaming feedback
-    // when they first compile a plugin, but obviously you don't need to keep
-    // this code if your algorithm always overwrites all the output channels.
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
 
-    // This is the place where you'd normally do the guts of your plugin's
-    // audio processing...
-    // Make sure to reset the state if your inner loop is processing
-    // the samples and the outer loop is handling the channels.
-    // Alternatively, you can process the samples with the channels
-    // interleaved by keeping the same state.
-    for (int channel = 0; channel < totalNumInputChannels; ++channel)
-    {
-        auto* channelData = buffer.getWritePointer (channel);
-
-        // ..do something to the data...
-    }
+    
+    
+    const float** ppfReadPointer = buffer.getArrayOfReadPointers();
+    m_pCPpm->process(ppfReadPointer, buffer.getNumSamples());
+    m_set.insert(m_pCPpm->getMaxPpm());
+    std::cout << m_pCPpm->getMaxPpm() << std::endl;
 }
 
 //==============================================================================
-bool NewProjectAudioProcessor::hasEditor() const
+bool PpmAudioProcessor::hasEditor() const
 {
     return true; // (change this to false if you choose to not supply an editor)
 }
 
-AudioProcessorEditor* NewProjectAudioProcessor::createEditor()
+AudioProcessorEditor* PpmAudioProcessor::createEditor()
 {
-    return new NewProjectAudioProcessorEditor (*this);
+    return new PpmAudioProcessorEditor (*this);
 }
 
 //==============================================================================
-void NewProjectAudioProcessor::getStateInformation (MemoryBlock& destData)
+void PpmAudioProcessor::getStateInformation (MemoryBlock& destData)
 {
     // You should use this method to store your parameters in the memory block.
     // You could do that either as raw data, or use the XML or ValueTree classes
     // as intermediaries to make it easy to save and load complex data.
 }
 
-void NewProjectAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
+void PpmAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
 {
     // You should use this method to restore your parameters from this memory block,
     // whose contents will have been created by the getStateInformation() call.
 }
 
 //==============================================================================
+float PpmAudioProcessor::getMaxSinceLastCall() {
+    float res = *m_set.rbegin();
+    m_set.clear();
+    return 0.5f;
+}
+
+//==============================================================================
 // This creates new instances of the plugin..
 AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
-    return new NewProjectAudioProcessor();
+    return new PpmAudioProcessor();
 }

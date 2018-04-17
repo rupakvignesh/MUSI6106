@@ -9,19 +9,20 @@
 */
 
 #pragma once
-
+#include <set>
 #include "../JuceLibraryCode/JuceHeader.h"
-
-
+#include "Ppm.h"
+#include "ErrorDef.h"
+using std::set;
 //==============================================================================
 /**
 */
-class NewProjectAudioProcessor  : public AudioProcessor
+class PpmAudioProcessor  : public AudioProcessor
 {
 public:
     //==============================================================================
-    NewProjectAudioProcessor();
-    ~NewProjectAudioProcessor();
+    PpmAudioProcessor();
+    ~PpmAudioProcessor();
 
     //==============================================================================
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
@@ -55,8 +56,13 @@ public:
     //==============================================================================
     void getStateInformation (MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
-
+    
+    //==============================================================================
+    float getMaxSinceLastCall();
+    bool m_bIsready;
 private:
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (NewProjectAudioProcessor)
+    CPpm* m_pCPpm;
+    set<float> m_set;
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PpmAudioProcessor)
 };

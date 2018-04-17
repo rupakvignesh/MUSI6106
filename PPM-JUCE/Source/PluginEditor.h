@@ -12,17 +12,16 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "PluginProcessor.h"
-
-
+#include "MeterComponent.h"
 //==============================================================================
 /**
 */
-class NewProjectAudioProcessorEditor  : public AudioProcessorEditor
+class PpmAudioProcessorEditor  : public AudioProcessorEditor, private Timer
 {
 public:
-    NewProjectAudioProcessorEditor (NewProjectAudioProcessor&);
-    ~NewProjectAudioProcessorEditor();
-
+    PpmAudioProcessorEditor (PpmAudioProcessor&);
+    ~PpmAudioProcessorEditor();
+    void timerCallback() override;
     //==============================================================================
     void paint (Graphics&) override;
     void resized() override;
@@ -30,7 +29,7 @@ public:
 private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
-    NewProjectAudioProcessor& processor;
-
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (NewProjectAudioProcessorEditor)
+    PpmAudioProcessor& processor;
+    MeterComponent m_meterComponent;
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PpmAudioProcessorEditor)
 };

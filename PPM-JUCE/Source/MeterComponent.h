@@ -2,8 +2,8 @@
   ==============================================================================
 
     MeterComponent.h
-    Created: 16 Apr 2018 4:51:36pm
-    Author:  Rupak Vignesh Swaminathan
+    Created: 17 Apr 2018 12:54:16pm
+    Author:  Yongliang He
 
   ==============================================================================
 */
@@ -18,44 +18,33 @@
 class MeterComponent    : public Component
 {
 public:
-    MeterComponent()
+    MeterComponent():m_fValue(0.5)
     {
-        // In your constructor, you should add any child components, and
-        // initialise any special settings that your component needs.
-
     }
 
     ~MeterComponent()
     {
     }
-
+    
+    
+    
     void paint (Graphics& g) override
     {
-        /* This demo code just fills the component's background and
-           draws some placeholder text to get you started.
-
-           You should replace everything in this method with your own
-           drawing code..
-        */
-
-        g.fillAll (getLookAndFeel().findColour (ResizableWindow::backgroundColourId));   // clear the background
-
-        g.setColour (Colours::grey);
-        g.drawRect (getLocalBounds(), 1);   // draw an outline around the component
-
-        g.setColour (Colours::white);
-        g.setFont (14.0f);
-        g.drawText ("MeterComponent", getLocalBounds(),
-                    Justification::centred, true);   // draw some placeholder text
+        g.fillAll(Colours::black);
+        g.setColour(Colours::green);
+        g.fillRoundedRectangle(5.0f, 5.0f, (getWidth() - 10.0f) * m_fValue, getHeight() - 10.0f, 2.0f);
     }
 
     void resized() override
     {
-        // This method is where you should set the bounds of any child
-        // components that your component contains..
-
+    }
+    
+    void setValue(float value) {
+        m_fValue = value;
+//        repaint();
     }
 
 private:
+    float m_fValue;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MeterComponent)
 };
