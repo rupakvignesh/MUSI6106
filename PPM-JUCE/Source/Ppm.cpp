@@ -39,8 +39,7 @@ CPpm::CPpm():m_iNumberOfChannels(0),
 
 CPpm::~CPpm()
 {
-    delete[] m_pfLastPpm;
-    m_pfLastPpm = nullptr;
+    reset();
 }
 
 Error_t CPpm::init(float sampleRate, int iNumberOfChannels, float fAttackTime, float fReleaseTime) {
@@ -64,6 +63,7 @@ Error_t CPpm::reset(){
     m_fAlphaAT = 0;
     m_fAlphaRT = 0;
     delete [] m_pfLastPpm;
+    m_pfLastPpm = nullptr;
     m_fMaxPpm = 0;
     m_bIsInitialized = false;
     return kNoError;
@@ -79,8 +79,6 @@ Error_t CPpm::process(const float **ppfInputBuffer, int iNumberOfFrames)
     if(ppfInputBuffer == nullptr || iNumberOfFrames<=0){
         return kFunctionInvalidArgsError;
     }
-//    m_pfLastPpm[0] = ppfInputBuffer[0][0];
-//    m_pfLastPpm[1] = ppfInputBuffer[1][0];
     
     m_fMaxPpm = 0;
     for (int f = 0; f < iNumberOfFrames; f++) {
@@ -92,10 +90,8 @@ Error_t CPpm::process(const float **ppfInputBuffer, int iNumberOfFrames)
             }
             if(m_fMaxPpm < m_pfLastPpm[c])
                 m_fMaxPpm = m_pfLastPpm[c];
-            //std::cout<<m_pfLastPpm[c]<<" ";
-        }
-        
-        //std::cout<<f<<std::endl;
+         }
+
     }
     return kNoError;
 }
