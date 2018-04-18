@@ -1,6 +1,7 @@
 #include <cmath>
 #include "ErrorDef.h"
 #include "Ppm.h"
+#include <iostream>
 
 Error_t CPpm::createInstance(CPpm *&pCPpm)
 {
@@ -78,8 +79,8 @@ Error_t CPpm::process(const float **ppfInputBuffer, int iNumberOfFrames)
     if(ppfInputBuffer == nullptr || iNumberOfFrames<=0){
         return kFunctionInvalidArgsError;
     }
-    m_pfLastPpm[0] = ppfInputBuffer[0][0];
-    m_pfLastPpm[1] = ppfInputBuffer[1][0];
+//    m_pfLastPpm[0] = ppfInputBuffer[0][0];
+//    m_pfLastPpm[1] = ppfInputBuffer[1][0];
     
     m_fMaxPpm = 0;
     for (int f = 0; f < iNumberOfFrames; f++) {
@@ -91,7 +92,10 @@ Error_t CPpm::process(const float **ppfInputBuffer, int iNumberOfFrames)
             }
             if(m_fMaxPpm < m_pfLastPpm[c])
                 m_fMaxPpm = m_pfLastPpm[c];
+            //std::cout<<m_pfLastPpm[c]<<" ";
         }
+        
+        //std::cout<<f<<std::endl;
     }
     return kNoError;
 }
