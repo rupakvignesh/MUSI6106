@@ -1,6 +1,7 @@
 #include <cmath>
 #include "ErrorDef.h"
 #include "Ppm.h"
+#include <iostream>
 
 Error_t CPpm::createInstance(CPpm *&pCPpm)
 {
@@ -43,11 +44,15 @@ CPpm::~CPpm()
 }
 
 Error_t CPpm::init(float sampleRate, int iNumberOfChannels, float fAttackTime, float fReleaseTime) {
+    
+    if (sampleRate<=0 || iNumberOfChannels <=0 || fAttackTime <= 0 || fReleaseTime <=0){
+        return kFunctionInvalidArgsError;
+    }
     m_bIsInitialized = true;
     m_iNumberOfChannels = iNumberOfChannels;
     m_fAlphaAT = 1.0f - exp(-2.2f / (sampleRate*fAttackTime));
     m_fAlphaRT = 1.0f - exp(-2.2f / (sampleRate*fReleaseTime));
-    delete[] m_pfLastPpm;
+    delete [] m_pfLastPpm;
     m_pfLastPpm = new float[iNumberOfChannels]();
     return kNoError;
 }
@@ -70,6 +75,13 @@ Error_t CPpm::process(const float **ppfInputBuffer, int iNumberOfFrames)
     if (!m_bIsInitialized) {
         return kNotInitializedError;
     }
+    
+    if(ppfInputBuffer == nullptr || iNumberOfFrames<=0){
+        return kFunctionInvalidArgsError;
+    }
+//    m_pfLastPpm[0] = ppfInputBuffer[0][0];
+//    m_pfLastPpm[1] = ppfInputBuffer[1][0];
+    
     m_fMaxPpm = 0;
     for (int f = 0; f < iNumberOfFrames; f++) {
          for (int c = 0; c < m_iNumberOfChannels; c++){
@@ -80,7 +92,10 @@ Error_t CPpm::process(const float **ppfInputBuffer, int iNumberOfFrames)
             }
             if(m_fMaxPpm < m_pfLastPpm[c])
                 m_fMaxPpm = m_pfLastPpm[c];
+            //std::cout<<m_pfLastPpm[c]<<" ";
         }
+        
+        //std::cout<<f<<std::endl;
     }
     return kNoError;
 }

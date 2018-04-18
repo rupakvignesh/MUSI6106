@@ -36,6 +36,7 @@ public:
 
     void resized() override
     {
+        
     }
     
     void setValue(float value) {

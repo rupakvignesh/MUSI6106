@@ -91,30 +91,25 @@ SUITE(Ppm)
         CHECK_CLOSE(0.9542F, m_pCPpm->getMaxPpm(), 0.05);
     }
     
-//    TEST_FIXTURE(PpmData, RectInput)
-//    {
-//        for (int c = 0; c < m_iNumberOfChannels; c++)
-//            CSynthesis::generateRect(m_ppfInputBuffer[c], 100.0, m_fSampleRateHz, m_iNumFrames, 0.95F);
-//        
-//        m_pCPpm->init(m_fSampleRateHz, m_iNumberOfChannels, m_fAttackTime, m_fReleaseTime);
-//        m_pCPpm->process((const float**)m_ppfInputBuffer, m_iNumFrames);
-//        
-//        CHECK_EQUAL(0.95F, m_pCPpm->getMaxPpm());
-//        
-//    }
-//    
-//    TEST_FIXTURE(PpmData, SawInput)
-//    {
-//        for (int c = 0; c < m_iNumberOfChannels; c++)
-//            CSynthesis::generateSaw(m_ppfInputBuffer[c], 100.0, m_fSampleRateHz, m_iNumFrames, 0.75F);
-//        
-//        m_pCPpm->init(m_fSampleRateHz, m_iNumberOfChannels, m_fAttackTime, m_fReleaseTime);
-//        m_pCPpm->process((const float**)m_ppfInputBuffer, m_iNumFrames);
-//        
-//        CHECK_EQUAL(0.75F, m_pCPpm->getMaxPpm());
-//        
-//    }
-//    
+    TEST_FIXTURE(PpmData, RectInput)
+    {
+        for (int c = 0; c < m_iNumberOfChannels; c++){
+            for(int f =0; f<m_iNumFrames; f++){
+                if (f%6<3)
+                    m_ppfInputBuffer[c][f] = 1;
+                else
+                    m_ppfInputBuffer[c][f] = -1;
+            }
+        }
+        
+        m_pCPpm->init(m_fSampleRateHz, m_iNumberOfChannels, m_fAttackTime, m_fReleaseTime);
+        m_pCPpm->process((const float**)m_ppfInputBuffer, m_iNumFrames);
+        
+        CHECK_CLOSE(1, m_pCPpm->getMaxPpm(), 0.01);
+        
+    }
+    
+   
     TEST_FIXTURE(PpmData, ZeroInput)
     {
         m_pCPpm->init(m_fSampleRateHz, m_iNumberOfChannels, m_fAttackTime, m_fReleaseTime);
