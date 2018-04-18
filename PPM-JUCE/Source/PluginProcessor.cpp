@@ -22,8 +22,10 @@ PpmAudioProcessor::PpmAudioProcessor()
                        .withOutput ("Output", AudioChannelSet::stereo(), true)
                      #endif
                        ),
-                       m_pCPpm(0),
-                       m_bIsready(false)
+                        m_bIsready(false),
+                        m_fMaxSinceLastCall(0),
+                       m_pCPpm(0)
+
 #endif
 {
     CPpm::createInstance(m_pCPpm);
@@ -31,6 +33,8 @@ PpmAudioProcessor::PpmAudioProcessor()
 
 PpmAudioProcessor::~PpmAudioProcessor()
 {
+    m_pCPpm->destroyInstance(m_pCPpm);
+    m_pCPpm = NULL;
 }
 
 //==============================================================================
@@ -98,13 +102,15 @@ void PpmAudioProcessor::changeProgramName (int index, const String& newName)
 //==============================================================================
 void PpmAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    m_pCPpm->init(sampleRate, getTotalNumInputChannels());
+    m_pCPpm->init(sampleRate, getTotalNumInputChannels(), 0.01, 1.5);
     m_bIsready = true;
 }
 
 void PpmAudioProcessor::releaseResources()
 {
-    m_pCPpm->destroyInstance(m_pCPpm);
+    //m_pCPpm->destroyInstance(m_pCPpm);
+    //m_pCPpm = NULL;
+    
 }
 
 #ifndef JucePlugin_PreferredChannelConfigurations
@@ -144,8 +150,11 @@ void PpmAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffer& mi
     
     const float** ppfReadPointer = buffer.getArrayOfReadPointers();
     m_pCPpm->process(ppfReadPointer, buffer.getNumSamples());
-    m_set.insert(m_pCPpm->getMaxPpm());
-    std::cout << m_pCPpm->getMaxPpm() << std::endl;
+//    m_set.insert(m_pCPpm->getMaxPpm());
+    if(m_fMaxSinceLastCall<m_pCPpm->getMaxPpm()){
+        m_fMaxSinceLastCall = m_pCPpm->getMaxPpm();
+    }
+    //std::cout << 20*log10f(m_pCPpm->getMaxPpm()) << std::endl;
 }
 
 //==============================================================================
@@ -175,9 +184,10 @@ void PpmAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
 
 //==============================================================================
 float PpmAudioProcessor::getMaxSinceLastCall() {
-    float res = *m_set.rbegin();
-    m_set.clear();
-    return 0.5f;
+    
+    float result = m_fMaxSinceLastCall;
+    m_fMaxSinceLastCall = 0.0;
+    return result;
 }
 
 //==============================================================================

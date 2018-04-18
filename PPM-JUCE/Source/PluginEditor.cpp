@@ -39,5 +39,6 @@ void PpmAudioProcessorEditor::resized()
 {
     int width = 120;
     int height = 20;
+    
     m_meterComponent.setBounds(getWidth() / 2 - width / 2, getHeight() / 2 - height / 2, width, height);
 }

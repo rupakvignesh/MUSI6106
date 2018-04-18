@@ -42,11 +42,11 @@ CPpm::~CPpm()
     m_pfLastPpm = nullptr;
 }
 
-Error_t CPpm::init(float sampleRate, int iNumberOfChannels) {
+Error_t CPpm::init(float sampleRate, int iNumberOfChannels, float fAttackTime, float fReleaseTime) {
     m_bIsInitialized = true;
     m_iNumberOfChannels = iNumberOfChannels;
-    m_fAlphaAT = 1.0f - exp(-220.0f / sampleRate);
-    m_fAlphaRT = 1.0f - exp(-2.2f / sampleRate / 1.5);
+    m_fAlphaAT = 1.0f - exp(-2.2f / (sampleRate*fAttackTime));
+    m_fAlphaRT = 1.0f - exp(-2.2f / (sampleRate*fReleaseTime));
     delete[] m_pfLastPpm;
     m_pfLastPpm = new float[iNumberOfChannels]();
     return kNoError;

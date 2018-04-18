@@ -9,11 +9,9 @@
 */
 
 #pragma once
-#include <set>
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "Ppm.h"
 #include "ErrorDef.h"
-using std::set;
 //==============================================================================
 /**
 */
@@ -63,6 +61,7 @@ public:
 private:
     //==============================================================================
     CPpm* m_pCPpm;
-    set<float> m_set;
+    float m_fMaxPpm;
+    float m_fMaxSinceLastCall;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PpmAudioProcessor)
 };

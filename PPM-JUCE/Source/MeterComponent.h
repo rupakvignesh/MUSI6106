@@ -11,7 +11,7 @@
 #pragma once
 
 #include "../JuceLibraryCode/JuceHeader.h"
-
+#include<iostream>
 //==============================================================================
 /*
 */
@@ -26,13 +26,12 @@ public:
     {
     }
     
-    
-    
     void paint (Graphics& g) override
     {
         g.fillAll(Colours::black);
         g.setColour(Colours::green);
-        g.fillRoundedRectangle(5.0f, 5.0f, (getWidth() - 10.0f) * m_fValue, getHeight() - 10.0f, 2.0f);
+        g.fillRoundedRectangle(5.0f, 5.0f, (getWidth() - 10) * m_fValue, getHeight() - 10.0f, 2.0f);
+        //g.fillRounded
     }
 
     void resized() override
@@ -40,8 +39,14 @@ public:
     }
     
     void setValue(float value) {
+        
+        if(value>=1){
+            value = 1.0;
+        }
+    
         m_fValue = value;
-//        repaint();
+        std::cout<<m_fValue<<std::endl;
+        repaint();
     }
 
 private:
