@@ -15,10 +15,12 @@ SUITE(Ppm)
         PpmData() : m_iNumberOfChannels(2),
                     m_iNumFrames(100),
                     m_bIsInitialized(false),
-                    m_fAlphaAT(0.10),
-                    m_fAlphaRT(1.5),
+                    m_fAlphaAT(0),
+                    m_fAttackTime(0.01),
+                    m_fAlphaRT(0),
+                    m_fReleaseTime(1.5),
                     m_ppfInputBuffer(0),
-                    m_iSampleRateHz(16000)
+                    m_fSampleRateHz(16000.0)
         
         {
             m_pCPpm     = new CPpm ();
@@ -27,6 +29,8 @@ SUITE(Ppm)
                 m_ppfInputBuffer[c] = new float[m_iNumFrames]();
             }
             m_pfLastPpm = new float[m_iNumberOfChannels]();
+            m_fAlphaAT = 1.0f - exp(-2.2f / (m_fSampleRateHz*m_fAttackTime));
+            m_fAlphaRT = 1.0f - exp(-2.2f / (m_fSampleRateHz*m_fReleaseTime));
             m_bIsInitialized = true;
         }
         
@@ -44,12 +48,15 @@ SUITE(Ppm)
         
         
         CPpm *m_pCPpm;
-        int m_iSampleRateHz;
+        float m_fSampleRateHz;
         int m_iNumberOfChannels;
         int m_iNumFrames;
         
         float m_fAlphaAT;
         float m_fAlphaRT;
+        
+        float m_fAttackTime;
+        float m_fReleaseTime;
         
         float m_fMaxPpm;
         float* m_pfLastPpm;
@@ -68,14 +75,45 @@ SUITE(Ppm)
         
     }
     
-    TEST_FIXTURE(PpmData, ModulatedSineWave)
+    TEST_FIXTURE(PpmData, SineWave)
     {
+        for (int c = 0; c < m_iNumberOfChannels; c++)
+            CSynthesis::generateSine (m_ppfInputBuffer[c], 100.0, m_fSampleRateHz, m_iNumFrames, 0.9F, 0.F);
+        
+        m_pCPpm->init(m_fSampleRateHz, m_iNumberOfChannels, m_fAlphaAT, m_fAlphaRT);
+        m_pCPpm->process((const float**)m_ppfInputBuffer, m_iNumFrames);
+        
+        CHECK_EQUAL(0.9F, m_pCPpm->getMaxPpm());
+        
+    }
+    
+    TEST_FIXTURE(PpmData, SquareWave)
+    {
+        for (int c = 0; c < m_iNumberOfChannels; c++)
+            CSynthesis::generateRect(m_ppfInputBuffer[c], 100.0, m_fSampleRateHz, m_iNumFrames, 0.95F);
+        
+        m_pCPpm->init(m_fSampleRateHz, m_iNumberOfChannels, m_fAlphaAT, m_fAlphaRT);
+        m_pCPpm->process((const float**)m_ppfInputBuffer, m_iNumFrames);
+        
+        CHECK_EQUAL(0.95F, m_pCPpm->getMaxPpm());
+        
+    }
+    
+    TEST_FIXTURE(PpmData, SawWave)
+    {
+        for (int c = 0; c < m_iNumberOfChannels; c++)
+            CSynthesis::generateSaw(m_ppfInputBuffer[c], 100.0, m_fSampleRateHz, m_iNumFrames, 0.75F);
+        
+        m_pCPpm->init(m_fSampleRateHz, m_iNumberOfChannels, m_fAlphaAT, m_fAlphaRT);
+        m_pCPpm->process((const float**)m_ppfInputBuffer, m_iNumFrames);
+        
+        CHECK_EQUAL(0.75F, m_pCPpm->getMaxPpm());
         
     }
     
     TEST_FIXTURE(PpmData, ZeroInput)
     {
-        m_pCPpm->init(m_iSampleRateHz, m_iNumberOfChannels, m_fAlphaAT, m_fAlphaRT);
+        m_pCPpm->init(m_fSampleRateHz, m_iNumberOfChannels, m_fAttackTime, m_fReleaseTime);
         m_pCPpm->process((const float**)m_ppfInputBuffer, m_iNumFrames);
         CHECK_EQUAL(0.F, m_pCPpm->getMaxPpm());
     }
@@ -90,7 +128,7 @@ SUITE(Ppm)
         }
         
         
-        m_pCPpm->init(m_iSampleRateHz, m_iNumberOfChannels, m_fAlphaAT, m_fAlphaRT);
+        m_pCPpm->init(m_fSampleRateHz, m_iNumberOfChannels, m_fAlphaAT, m_fAlphaRT);
         m_pCPpm->process((const float**)m_ppfInputBuffer, m_iNumFrames);
         
         CHECK_EQUAL(1.F, m_pCPpm->getMaxPpm());
