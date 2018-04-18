@@ -52,14 +52,27 @@ Error_t CPpm::init(float sampleRate, int iNumberOfChannels, float fAttackTime, f
     return kNoError;
 }
 
+Error_t CPpm::reset(){
+    
+    
+    m_iNumberOfChannels = 0;
+    m_fAlphaAT = 0;
+    m_fAlphaRT = 0;
+    delete [] m_pfLastPpm;
+    m_fMaxPpm = 0;
+    m_bIsInitialized = false;
+    return kNoError;
+    
+}
+
 Error_t CPpm::process(const float **ppfInputBuffer, int iNumberOfFrames)
 {
     if (!m_bIsInitialized) {
         return kNotInitializedError;
     }
     m_fMaxPpm = 0;
-    for (int c = 0; c < m_iNumberOfChannels; c++) {
-        for (int f = 0; f < iNumberOfFrames; f++) {
+    for (int f = 0; f < iNumberOfFrames; f++) {
+         for (int c = 0; c < m_iNumberOfChannels; c++){
             if (ppfInputBuffer[c][f] < m_pfLastPpm[c]) {
                 m_pfLastPpm[c] *= (1 - m_fAlphaRT);
             } else {

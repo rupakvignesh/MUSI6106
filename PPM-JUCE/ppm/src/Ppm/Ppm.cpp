@@ -42,14 +42,27 @@ CPpm::~CPpm()
     m_pfLastPpm = nullptr;
 }
 
-Error_t CPpm::init(float sampleRate, int iNumberOfChannels) {
+Error_t CPpm::init(float sampleRate, int iNumberOfChannels, float fAttackTime, float fReleaseTime) {
     m_bIsInitialized = true;
     m_iNumberOfChannels = iNumberOfChannels;
-    m_fAlphaAT = 1.0f - exp(-220.0f / sampleRate);
-    m_fAlphaRT = 1.0f - exp(-2.2f / sampleRate / 1.5);
+    m_fAlphaAT = 1.0f - exp(-2.2f / (sampleRate*fAttackTime));
+    m_fAlphaRT = 1.0f - exp(-2.2f / (sampleRate*fReleaseTime));
     delete[] m_pfLastPpm;
     m_pfLastPpm = new float[iNumberOfChannels]();
     return kNoError;
+}
+
+Error_t CPpm::reset(){
+    
+    
+    m_iNumberOfChannels = 0;
+    m_fAlphaAT = 0;
+    m_fAlphaRT = 0;
+    delete [] m_pfLastPpm;
+    m_fMaxPpm = 0;
+    m_bIsInitialized = false;
+    return kNoError;
+    
 }
 
 Error_t CPpm::process(const float **ppfInputBuffer, int iNumberOfFrames)
@@ -58,8 +71,8 @@ Error_t CPpm::process(const float **ppfInputBuffer, int iNumberOfFrames)
         return kNotInitializedError;
     }
     m_fMaxPpm = 0;
-    for (int c = 0; c < m_iNumberOfChannels; c++) {
-        for (int f = 0; f < iNumberOfFrames; f++) {
+    for (int f = 0; f < iNumberOfFrames; f++) {
+         for (int c = 0; c < m_iNumberOfChannels; c++){
             if (ppfInputBuffer[c][f] < m_pfLastPpm[c]) {
                 m_pfLastPpm[c] *= (1 - m_fAlphaRT);
             } else {

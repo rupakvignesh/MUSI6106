@@ -8,12 +8,13 @@ class CPpm
 public:
     static Error_t createInstance (CPpm*& pCPpm);
     static Error_t destroyInstance (CPpm*& pCPpm);
-    Error_t init(float fSampleRate, int iNumberOfChannels);
+    
+    Error_t init(float fSampleRate, int iNumberOfChannels, float fAttackTime, float fReleaseTime);
+    Error_t reset();
     Error_t process (const float **ppfInputBuffer, int iNumberOfFrames);
     float getMaxPpm();
 
 
-protected:
     CPpm ();
     virtual ~CPpm ();
 
