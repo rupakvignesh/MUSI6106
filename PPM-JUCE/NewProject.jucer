@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT name="NewProject" projectType="audioplug" buildStandalone="1"
+<JUCERPROJECT name="PPMPlugin" projectType="audioplug" buildStandalone="1"
               jucerVersion="5.2.1" headerPath="/Users/RupakVignesh/Desktop/spring18/MUSI6106/PPM-JUCE/ppm/src/inc">
-  <MAINGROUP id="xpp0DM" name="NewProject">
+  <MAINGROUP id="xpp0DM" name="PPMPlugin">
     <GROUP id="{D2F86730-C617-90ED-2CD9-095E82F2D73F}" name="Source">
       <FILE id="kJvgef" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
@@ -14,6 +14,7 @@
       <FILE id="Y9CXaH" name="MeterComponent.h" compile="0" resource="0"
             file="Source/MeterComponent.h"/>
     </GROUP>
+    <FILE id="sFK3vA" name="Ppm.cpp" compile="1" resource="0" file="Source/Ppm.cpp"/>
   </MAINGROUP>
   <EXPORTFORMATS>
     <XCODE_MAC targetFolder="Builds/MacOSX">
